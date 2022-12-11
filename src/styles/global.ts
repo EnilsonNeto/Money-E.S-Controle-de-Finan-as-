@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle  = createGlobalStyle `
     :root {
-        --background: #F5FAFA;
+        --background1: #F5FAFA;
         --red: red;
         --purple: #7110CC;
 
@@ -11,7 +11,7 @@ export const GlobalStyle  = createGlobalStyle `
         --text-title: #353F5F;
         --text-body: #969CB3;
 
-        --background: F0F2F5;
+        --background2: F0F2F5;
         --shape: #E3E2F7;    
     
         --green: #007327;
@@ -56,5 +56,43 @@ export const GlobalStyle  = createGlobalStyle `
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
+    }
+
+
+    .react-modal-overlay {
+        background : rgba(0, 0 , 0, 0.5);
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .react-modal-content {
+        width: 100%;
+        max-width: 576px;
+        background: var(--background1);
+        padding: 3rem;
+        position: relative;
+        border-radius: 0.24rem;
+    }
+    .react-modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        border: 0;
+        background: transparent;
+        opacity: 0.5;
+
+        transition: 0.2s;
+
+        &:hover {
+            filter: brightness(0.2);
+        }
     }
 `;
