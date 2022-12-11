@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Dashboard } from './components/Dashboard';
-import { Header } from "./components/Header"
+import { Header } from './components/Header';
 import { GlobalStyle } from './styles/global';
 import Modal from 'react-modal';
+import { NewTransactionModal } from './components/NewTransactionModal'
 
 Modal.setAppElement('#root');
 export function App() {
@@ -19,13 +20,14 @@ export function App() {
   return (
     <>
     <Header onOpenNewTransactionModal={handleOpenNewTrasactionModal}/>
+    
     <Dashboard />
-    <Modal isOpen={isNewTrasactionModalOpen} 
-                onRequestClose= {handleCloseNewTrasactionModal}
-                >
-                    <h2>Cadastrar Transação</h2>
-                </Modal>
 
+    <NewTransactionModal
+      isOpen={isNewTrasactionModalOpen}
+      onRequestClose={handleCloseNewTrasactionModal}
+    />
+    
     <GlobalStyle/>
     </>
   );
