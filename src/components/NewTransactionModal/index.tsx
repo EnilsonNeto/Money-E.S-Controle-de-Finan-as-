@@ -1,8 +1,8 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import Modal from 'react-modal';
-import positImg from '../../assets/positivo.svg';
+import positImg  from '../../assets/positivo.svg';
 import negatImg from '../../assets/negativo.svg';
-import { Container, TransactionTypeContainer } from './styles';
+import { Container, TransactionTypeContainer, Radiobox } from './styles';
 import closeImg from '../../assets/x.svg';
 
 interface NewTransactioModalProps {
@@ -11,6 +11,11 @@ interface NewTransactioModalProps {
 }
 
 export function NewTransactionModal ({isOpen, onRequestClose} : NewTransactioModalProps) {
+    
+    const [type , setType] = useState ('deposit');
+    
+    
+    
     return (
         <Modal 
         isOpen={isOpen} 
@@ -31,15 +36,25 @@ export function NewTransactionModal ({isOpen, onRequestClose} : NewTransactioMod
 
             <TransactionTypeContainer>
 
-                <button type='button'>
+                <Radiobox 
+                type="button"
+                isActive = {type === 'deposit'}
+                onClick={() => { setType('deposit');}}
+                activeColor = "green"
+                >
                     <img src={positImg} alt="Entrada" />
                     <span>Entrada</span>
-                </button>
+                </Radiobox>
 
-                <button type='button'>
+                <Radiobox 
+                type="button"
+                isActive = {type === 'withdraw'}
+                onClick={() => { setType('withdraw');}}
+                activeColor = "red"
+                >
                     <img src={negatImg} alt="Saida" />
                     <span>Saida</span>
-                </button>
+                </Radiobox>
 
             </TransactionTypeContainer>
 

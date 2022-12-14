@@ -53,11 +53,27 @@ export const Container = styled.form `
         grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
 
-        button {
+    `;
+
+    interface RadioBoxProps {
+        isActive: boolean;
+        activeColor: 'green' | 'red';
+    }
+
+    const colors = {
+        green: '#007327',
+        red: 'red'
+    }
+
+    export const Radiobox = styled.button<RadioBoxProps> `
             height: 4rem;
             border: 1px solid #d7d7d7;
             border-radius: 0.25rem;
-            background: transparent;
+            
+            background: ${(props) => props.isActive ? 
+            colors[props.activeColor] 
+            : 'transparent'};
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,5 +93,4 @@ export const Container = styled.form `
                 font-size: 1rem;
                 color: var(--text-title);
             }
-        }
     `;
