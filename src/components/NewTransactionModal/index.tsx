@@ -4,6 +4,7 @@ import positImg  from '../../assets/positivo.svg';
 import negatImg from '../../assets/negativo.svg';
 import { Container, TransactionTypeContainer, Radiobox } from './styles';
 import closeImg from '../../assets/x.svg';
+import { api } from '../services/api';
 
 interface NewTransactioModalProps {
     isOpen: boolean;
@@ -19,6 +20,15 @@ export function NewTransactionModal ({isOpen, onRequestClose} : NewTransactioMod
     
     function handleCreateNewTransaction (event: FormEvent) {
         event.preventDefault();
+
+        const data  = { 
+            title,
+            value,
+            category,
+            type,
+        };
+
+        api.post('/transactions', data)
     }
 
     
