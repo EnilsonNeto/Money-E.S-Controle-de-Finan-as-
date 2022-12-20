@@ -27,14 +27,6 @@ createServer({
           amount: 4000,
           createdAt: new Date ('2022-12-15 22:20:35'),
         },
-        {
-          id: 3,
-          title: 'teste',
-          type: 'withdraw',
-          category: 'casa',
-          amount: 250,
-          createdAt: new Date ('2022-12-15 22:20:35'),
-        }
       ],
     })
   },
