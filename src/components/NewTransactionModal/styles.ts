@@ -62,7 +62,7 @@ export const Container = styled.form `
 
     const colors = {
         green: '#007327',
-        red: 'red'
+        red: '#E52E4d'
     }
 
     export const Radiobox = styled.button<RadioBoxProps> `

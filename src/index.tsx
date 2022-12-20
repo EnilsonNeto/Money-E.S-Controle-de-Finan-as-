@@ -22,7 +22,7 @@ createServer({
         {
           id: 2,
           title: 'pc',
-          type: 'withdraw',
+          type: 'deposit',
           category:'trabalho',
           amount: 4000,
           createdAt: new Date ('2022-12-15 22:20:35'),
