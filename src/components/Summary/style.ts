@@ -7,6 +7,10 @@ export const Container = styled.div `
     gap: 2rem;
     margin-top: -10rem;
     
+    .total{
+        color: white;
+    }
+    
     p {
         font-weight: 600;
         color: var(--purple-dark);

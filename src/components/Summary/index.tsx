@@ -22,7 +22,7 @@ export function Summary () {
             </div>
             <div className="background-green">
                 <header>
-                    <p>Total</p>
+                    <p className="total">Total</p>
                     <img src={cifrao} alt="total" />
                 </header>
                 <strong>R$700,00</strong>
