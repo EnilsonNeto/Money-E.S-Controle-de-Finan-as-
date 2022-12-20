@@ -8,8 +8,8 @@ export const Container = styled.div`
         border-spacing: 0 0.5rem;
 
         th{
-            color: var(--text-body);
-            font-weight: 400;
+            color: var(--purple-dark);
+            font-weight: 600;
             padding: 1rem 2rem;
             text-align: left;
             line-height: 1.5rem;
@@ -21,17 +21,20 @@ export const Container = styled.div`
             background: var(--shape);
             color: var(--text-body);
             border-radius: 0.1rem;
+            font-weight: 600;
 
             &:first-child {
                 color: var(--text-title);
             }
 
-            &.winner {
+            &.deposit{
                 color: var(--green);
+                font-weight: 600;
             }
 
-            &.fall {
+            &.withdraw{
                 color: var(--red);
+                font-weight: 600;
             }
 
         }

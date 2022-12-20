@@ -7,6 +7,12 @@ export const Container = styled.div `
     gap: 2rem;
     margin-top: -10rem;
     
+    p {
+        font-weight: 600;
+        color: var(--purple-dark);
+        text-transform: uppercase;
+    }
+    
     div{
         background: var(--shape);
         padding: 1.5rem 2rem;
